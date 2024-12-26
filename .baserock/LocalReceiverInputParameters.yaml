@@ -1,0 +1,116 @@
+---
+targetClass:
+  fullClassName: "io.vertx.example.core.eventbus.messagecodec.LocalReceiver"
+methods:
+- method:
+    name: "start"
+    sourceCodeSignature: "Future<?> start()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    throwsExceptions:
+    - "java.lang.Exception"
+    instructionFingerprint: "9D72EDF347388A703E5CB3FBD3FEA15D"
+  paths:
+  - testPathName: "startThrowsNullPointerException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "vertx"
+      valueUuid: "fieldVertx"
+      methodExercised:
+        expression: "eventBus():eventBus"
+    - type: "LOCAL_VARIABLE"
+      name: "eventBus"
+      valueUuid: "eventBus"
+      methodExercised:
+        expression: "consumer(arg0,arg1-any):messageConsumer"
+    - type: "LOCAL_VARIABLE"
+      name: "message"
+      valueUuid: "message"
+      methodExercised:
+        expression: "body():object"
+    - type: "LOCAL_VARIABLE"
+      name: "message"
+      valueUuid: "message"
+      methodExercised:
+        expression: "reply(customMessage-any):void2"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "nullPointerException"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.example.core.eventbus.messagecodec.LocalReceiver"
+        parameters: []
+        propertiesMap:
+          vertx:
+            modelValueType: "MOCK"
+            valueType: "io.vertx.core.Vertx"
+            uuid: "fieldVertx"
+      valueType: "io.vertx.example.core.eventbus.messagecodec.LocalReceiver"
+      uuid: "target"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Vertx"
+      uuid: "fieldVertx"
+      nameForMock: "vertx"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.eventbus.EventBus"
+      uuid: "eventBus"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.eventbus.MessageConsumer"
+      uuid: "messageConsumer"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "local-message-receiver"
+      valueType: "java.lang.String"
+      uuid: "arg0"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      uuid: "arg1-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.eventbus.Message"
+      uuid: "message"
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.example.core.eventbus.messagecodec.util.CustomMessage"
+        parameters:
+        - name: "statusCode"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "object-statusCode"
+        - name: "resultCode"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "resultCode1"
+            valueType: "java.lang.String"
+            uuid: "object-resultCode"
+        - name: "summary"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "object-summary"
+      valueType: "io.vertx.example.core.eventbus.messagecodec.util.CustomMessage"
+      uuid: "object"
+    - modelValueType: "VOID"
+      valueType: "void"
+      uuid: "void2"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.example.core.eventbus.messagecodec.util.CustomMessage"
+      uuid: "customMessage-any"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.NullPointerException"
+        parameters: []
+      valueType: "java.lang.NullPointerException"
+      uuid: "nullPointerException"

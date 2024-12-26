@@ -1,0 +1,305 @@
+---
+targetClass:
+  fullClassName: "io.vertx.examples.mongo.MongoClientVerticle"
+methods:
+- method:
+    name: "start"
+    sourceCodeSignature: "Future<?> start()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    instructionFingerprint: "07AC3DD6417A280F9E703FD967252E6C"
+  paths:
+  - testPathName: "startTest"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "mongoClient"
+      valueUuid: "mongoClient"
+      methodExercised:
+        expression: "save(arg0,jsonObject7):future"
+    - type: "FIELD"
+      name: "mongoClient"
+      valueUuid: "mongoClient"
+      methodExercised:
+        expression: "find(arg02,jsonObject9):future3"
+    - type: "FIELD"
+      name: "mongoClient"
+      valueUuid: "mongoClient"
+      methodExercised:
+        expression: "removeDocument(arg04,jsonObject11):future5"
+    - type: "STATIC"
+      name: "MongoClient.class"
+      valueUuid: "MongoClient.class"
+      methodExercised:
+        expression: "createShared(fieldVertx,jsonObject3):mongoClient"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "future"
+      methodExercised:
+        expression: "compose(mapper-any):future2"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "future2"
+      methodExercised:
+        expression: "compose(mapper2-any):future4"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "future4"
+      methodExercised:
+        expression: "onSuccess(handler-any):future6"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "future6"
+    disabled: false
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: ".put(\\\"connection_string\\\", MONGO_DB_CONTAINER.getConnectionString())"
+      lineNumber: 26
+      details: "A variable could not be isolated/mocked when calling a method - Variable\
+        \ name: MONGO_DB_CONTAINER - Method: getConnectionString"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.examples.mongo.MongoClientVerticle"
+        parameters: []
+        propertiesMap:
+          mongoClient:
+            modelValueType: "MOCK"
+            valueType: "io.vertx.ext.mongo.MongoClient"
+            uuid: "mongoClient"
+      valueType: "io.vertx.examples.mongo.MongoClientVerticle"
+      uuid: "target"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.ext.mongo.MongoClient"
+      uuid: "mongoClient"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.String"
+      uuid: "future"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "products"
+      valueType: "java.lang.String"
+      uuid: "arg0"
+    - modelValueType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "io.vertx.core.json.JsonObject"
+        localVariableValue:
+          modelValueType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "io.vertx.core.json.JsonObject"
+            localVariableValue:
+              modelValueType: "OBJECT"
+              content: !<method_return_from_value>
+                target: "io.vertx.core.json.JsonObject"
+                localVariableValue:
+                  modelValueType: "OBJECT"
+                  content: !<new>
+                    target: "io.vertx.core.json.JsonObject"
+                    parameters: []
+                  valueType: "io.vertx.core.json.JsonObject"
+                  uuid: "jsonObject4"
+                methodParameters:
+                - name: "key"
+                  value:
+                    modelValueType: "BASIC"
+                    content: !<regular>
+                      value: "itemId"
+                    valueType: "java.lang.String"
+                    uuid: "key3"
+                - name: "value"
+                  value:
+                    modelValueType: "BASIC"
+                    content: !<regular>
+                      value: "12345"
+                    valueType: "java.lang.String"
+                    uuid: "value2"
+                methodName: "put"
+              valueType: "io.vertx.core.json.JsonObject"
+              uuid: "jsonObject5"
+            methodParameters:
+            - name: "key"
+              value:
+                modelValueType: "BASIC"
+                content: !<regular>
+                  value: "name"
+                valueType: "java.lang.String"
+                uuid: "key4"
+            - name: "value"
+              value:
+                modelValueType: "BASIC"
+                content: !<regular>
+                  value: "Cooler"
+                valueType: "java.lang.String"
+                uuid: "value3"
+            methodName: "put"
+          valueType: "io.vertx.core.json.JsonObject"
+          uuid: "jsonObject6"
+        methodParameters:
+        - name: "key"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "price"
+            valueType: "java.lang.String"
+            uuid: "key5"
+        - name: "value"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "100.0"
+            valueType: "java.lang.String"
+            uuid: "value4"
+        methodName: "put"
+      valueType: "io.vertx.core.json.JsonObject"
+      uuid: "jsonObject7"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.util.List<io.vertx.core.json.JsonObject>"
+      uuid: "future3"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "products"
+      valueType: "java.lang.String"
+      uuid: "arg02"
+    - modelValueType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "io.vertx.core.json.JsonObject"
+        localVariableValue:
+          modelValueType: "OBJECT"
+          content: !<new>
+            target: "io.vertx.core.json.JsonObject"
+            parameters: []
+          valueType: "io.vertx.core.json.JsonObject"
+          uuid: "jsonObject8"
+        methodParameters:
+        - name: "key"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "itemId"
+            valueType: "java.lang.String"
+            uuid: "key6"
+        - name: "value"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "12345"
+            valueType: "java.lang.String"
+            uuid: "value5"
+        methodName: "put"
+      valueType: "io.vertx.core.json.JsonObject"
+      uuid: "jsonObject9"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "io.vertx.ext.mongo.MongoClientDeleteResult"
+      uuid: "future5"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "products"
+      valueType: "java.lang.String"
+      uuid: "arg04"
+    - modelValueType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "io.vertx.core.json.JsonObject"
+        localVariableValue:
+          modelValueType: "OBJECT"
+          content: !<new>
+            target: "io.vertx.core.json.JsonObject"
+            parameters: []
+          valueType: "io.vertx.core.json.JsonObject"
+          uuid: "jsonObject10"
+        methodParameters:
+        - name: "key"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "itemId"
+            valueType: "java.lang.String"
+            uuid: "key8"
+        - name: "value"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "12345"
+            valueType: "java.lang.String"
+            uuid: "value6"
+        methodName: "put"
+      valueType: "io.vertx.core.json.JsonObject"
+      uuid: "jsonObject11"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.ext.mongo.MongoClient"
+      uuid: "MongoClient.class"
+    - modelValueType: "NULL"
+      valueType: "io.vertx.core.Vertx"
+      uuid: "fieldVertx"
+    - modelValueType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "io.vertx.core.json.JsonObject"
+        localVariableValue:
+          modelValueType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "io.vertx.core.json.JsonObject"
+            localVariableValue:
+              modelValueType: "OBJECT"
+              content: !<new>
+                target: "io.vertx.core.json.JsonObject"
+                parameters: []
+              valueType: "io.vertx.core.json.JsonObject"
+              uuid: "jsonObject"
+            methodParameters:
+            - name: "key"
+              value:
+                modelValueType: "BASIC"
+                content: !<regular>
+                  value: "connection_string"
+                valueType: "java.lang.String"
+                uuid: "key"
+            - name: "value"
+              value:
+                modelValueType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "string"
+            methodName: "put"
+          valueType: "io.vertx.core.json.JsonObject"
+          uuid: "jsonObject2"
+        methodParameters:
+        - name: "key"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "db_name"
+            valueType: "java.lang.String"
+            uuid: "key2"
+        - name: "value"
+          value:
+            modelValueType: "BASIC"
+            content: !<regular>
+              value: "test"
+            valueType: "java.lang.String"
+            uuid: "value"
+        methodName: "put"
+      valueType: "io.vertx.core.json.JsonObject"
+      uuid: "jsonObject3"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      uuid: "future2"
+    - modelValueType: "ANY"
+      valueType: "java.util.function.Function"
+      uuid: "mapper-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      uuid: "future4"
+    - modelValueType: "ANY"
+      valueType: "java.util.function.Function"
+      uuid: "mapper2-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "?"
+      uuid: "future6"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      uuid: "handler-any"

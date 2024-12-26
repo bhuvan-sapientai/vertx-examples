@@ -1,0 +1,94 @@
+---
+targetClass:
+  fullClassName: "io.vertx.example.core.verticle.deploy.OtherVerticle"
+methods:
+- method:
+    name: "start"
+    sourceCodeSignature: "Future<?> start()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    throwsExceptions:
+    - "java.lang.Exception"
+    instructionFingerprint: "83B42EB6250DAD514697978F6B264666"
+  paths:
+  - testPathName: "startTest"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "context"
+      valueUuid: "fieldContext"
+      methodExercised:
+        expression: "config():jsonObject"
+    - type: "FIELD"
+      name: "fieldContext"
+      valueUuid: "fieldContext"
+      methodExercised:
+        expression: "succeededFuture():future"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "future"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.example.core.verticle.deploy.OtherVerticle"
+        parameters: []
+        propertiesMap:
+          context:
+            modelValueType: "MOCK"
+            valueType: "io.vertx.core.internal.ContextInternal"
+            uuid: "fieldContext"
+      valueType: "io.vertx.example.core.verticle.deploy.OtherVerticle"
+      uuid: "target"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.internal.ContextInternal"
+      uuid: "fieldContext"
+      nameForMock: "context"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.json.JsonObject"
+      uuid: "jsonObject"
+      nameForMock: "jsonObject"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "?"
+      uuid: "future"
+- method:
+    name: "stop"
+    sourceCodeSignature: "Future<?> stop()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    throwsExceptions:
+    - "java.lang.Exception"
+    instructionFingerprint: "4FA4B88FE152FD829B7CA0EF1A2FBB68"
+  paths:
+  - testPathName: "stopThrowsNullPointerException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "nullPointerException"
+    disabled: true
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    disabledStatusUpdatedBy: "SYSTEM"
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.example.core.verticle.deploy.OtherVerticle"
+        parameters: []
+      valueType: "io.vertx.example.core.verticle.deploy.OtherVerticle"
+      uuid: "target"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.NullPointerException"
+        parameters: []
+      valueType: "java.lang.NullPointerException"
+      uuid: "nullPointerException"

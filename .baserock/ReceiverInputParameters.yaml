@@ -1,0 +1,102 @@
+---
+targetClass:
+  fullClassName: "io.vertx.example.core.eventbus.pubsub.Receiver"
+methods:
+- method:
+    name: "start"
+    sourceCodeSignature: "Future<?> start()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    throwsExceptions:
+    - "java.lang.Exception"
+    instructionFingerprint: "D8E1E30ACF62A57B99689B9B6D64D991"
+  paths:
+  - testPathName: "startThrowsNullPointerException"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "vertx"
+      valueUuid: "fieldVertx"
+      methodExercised:
+        expression: "eventBus():eventBus"
+    - type: "LOCAL_VARIABLE"
+      name: "eb"
+      valueUuid: "eventBus"
+      methodExercised:
+        expression: "consumer(arg0,arg1-any):messageConsumer"
+    - type: "LOCAL_VARIABLE"
+      name: "eb"
+      valueUuid: "eventBus"
+      methodExercised:
+        expression: "consumer(arg02,arg12-any):messageConsumer2"
+    - type: "LOCAL_VARIABLE"
+      name: "eb"
+      valueUuid: "eventBus"
+      methodExercised:
+        expression: "consumer(arg03,arg13-any):messageConsumer3"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "nullPointerException"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.example.core.eventbus.pubsub.Receiver"
+        parameters: []
+        propertiesMap:
+          vertx:
+            modelValueType: "MOCK"
+            valueType: "io.vertx.core.Vertx"
+            uuid: "fieldVertx"
+      valueType: "io.vertx.example.core.eventbus.pubsub.Receiver"
+      uuid: "target"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Vertx"
+      uuid: "fieldVertx"
+      nameForMock: "vertx"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.eventbus.EventBus"
+      uuid: "eventBus"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.eventbus.MessageConsumer"
+      uuid: "messageConsumer"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "news-feed"
+      valueType: "java.lang.String"
+      uuid: "arg0"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      uuid: "arg1-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.eventbus.MessageConsumer"
+      uuid: "messageConsumer2"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "news-feed"
+      valueType: "java.lang.String"
+      uuid: "arg02"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      uuid: "arg12-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.eventbus.MessageConsumer"
+      uuid: "messageConsumer3"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "news-feed"
+      valueType: "java.lang.String"
+      uuid: "arg03"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      uuid: "arg13-any"
+    - modelValueType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.NullPointerException"
+        parameters: []
+      valueType: "java.lang.NullPointerException"
+      uuid: "nullPointerException"

@@ -1,0 +1,138 @@
+---
+targetClass:
+  fullClassName: "hello.SampleVerticle"
+methods:
+- method:
+    name: "start"
+    sourceCodeSignature: "Future<?> start()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    instructionFingerprint: "A90D0FCCC20E564EDF481A83D94ACF17"
+  paths:
+  - testPathName: "startTest"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "vertx"
+      valueUuid: "fieldVertx"
+      methodExercised:
+        expression: "createHttpServer():httpServer"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "httpServer"
+      methodExercised:
+        expression: "requestHandler(arg04-any):httpServer2"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "httpServer2"
+      methodExercised:
+        expression: "listen(port):future2"
+    - type: "LOCAL_VARIABLE"
+      name: "req"
+      valueUuid: "httpServerRequest"
+      methodExercised:
+        expression: "response():httpServerResponse"
+    - type: "LOCAL_VARIABLE"
+      name: "req"
+      valueUuid: "httpServerRequest"
+      methodExercised:
+        expression: "path():string"
+    - type: "LOCAL_VARIABLE"
+      name: "req"
+      valueUuid: "httpServerRequest"
+      methodExercised:
+        expression: "remoteAddress():socketAddress"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "httpServerResponse"
+      methodExercised:
+        expression: "putHeader(arg0,arg1):httpServerResponse2"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "httpServerResponse2"
+      methodExercised:
+        expression: "end(arg02):future"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "socketAddress"
+      methodExercised:
+        expression: "host():string2"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "future2"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "hello.SampleVerticle"
+        parameters: []
+        propertiesMap:
+          vertx:
+            modelValueType: "MOCK"
+            valueType: "io.vertx.core.Vertx"
+            uuid: "fieldVertx"
+      valueType: "hello.SampleVerticle"
+      uuid: "target"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Vertx"
+      uuid: "fieldVertx"
+      nameForMock: "vertx"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpServer"
+      uuid: "httpServer"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpServer"
+      uuid: "httpServer2"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      genericValueType: "io.vertx.core.http.HttpServerRequest"
+      uuid: "arg04-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "io.vertx.core.http.HttpServer"
+      uuid: "future2"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: 11981
+      valueType: "int"
+      uuid: "port"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpServerRequest"
+      uuid: "httpServerRequest"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpServerResponse"
+      uuid: "httpServerResponse"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "return_of_path1"
+      valueType: "java.lang.String"
+      uuid: "string"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.net.SocketAddress"
+      uuid: "socketAddress"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpServerResponse"
+      uuid: "httpServerResponse2"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "Content-Type"
+      valueType: "java.lang.String"
+      uuid: "arg0"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "plain/text"
+      valueType: "java.lang.String"
+      uuid: "arg1"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "Yo!"
+      valueType: "java.lang.String"
+      uuid: "arg02"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "return_of_host1"
+      valueType: "java.lang.String"
+      uuid: "string2"

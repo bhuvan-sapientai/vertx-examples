@@ -1,0 +1,72 @@
+---
+targetClass:
+  fullClassName: "io.vertx.example.core.http.sharing.HttpServerVerticle"
+methods:
+- method:
+    name: "start"
+    sourceCodeSignature: "Future<?> start()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    throwsExceptions:
+    - "java.lang.Exception"
+    instructionFingerprint: "3B75783B8181B54ED18359D920C90E68"
+  paths:
+  - testPathName: "startTest"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "vertx"
+      valueUuid: "fieldVertx"
+      methodExercised:
+        expression: "createHttpServer():httpServer"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "httpServer"
+      methodExercised:
+        expression: "requestHandler(arg03-any):httpServer2"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "httpServer2"
+      methodExercised:
+        expression: "listen(port):future2"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "future2"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.example.core.http.sharing.HttpServerVerticle"
+        parameters: []
+        propertiesMap:
+          vertx:
+            modelValueType: "MOCK"
+            valueType: "io.vertx.core.Vertx"
+            uuid: "fieldVertx"
+      valueType: "io.vertx.example.core.http.sharing.HttpServerVerticle"
+      uuid: "target"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Vertx"
+      uuid: "fieldVertx"
+      nameForMock: "vertx"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpServer"
+      uuid: "httpServer"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpServer"
+      uuid: "httpServer2"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      genericValueType: "io.vertx.core.http.HttpServerRequest"
+      uuid: "arg03-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "io.vertx.core.http.HttpServer"
+      uuid: "future2"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: 8080
+      valueType: "int"
+      uuid: "port"

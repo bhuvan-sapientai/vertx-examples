@@ -1,0 +1,423 @@
+---
+targetClass:
+  fullClassName: "io.vertx.example.core.http.proxyconnect.Client"
+methods:
+- method:
+    name: "start"
+    sourceCodeSignature: "Future<?> start()"
+    returnType: "io.vertx.core.Future"
+    genericReturnType: "?"
+    throwsExceptions:
+    - "java.lang.Exception"
+    instructionFingerprint: "62C456829CFB9C80712B0DFADD9F11BF"
+  paths:
+  - testPathName: "startWhenILessThan10"
+    constructorSignature: "<init>() : void"
+    problemWasSolvedByProver: true
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      name: "constructor"
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "vertx"
+      valueUuid: "fieldVertx"
+      methodExercised:
+        expression: "createHttpClient(httpClientOptions5):httpClientAgent"
+    - type: "FIELD"
+      name: "client"
+      valueUuid: "httpClientAgent"
+      methodExercised:
+        expression: "request(httpMethod,port2,host2,requestURI):future"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "future"
+      methodExercised:
+        expression: "compose(mapper2-any):future2"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "future14"
+      methodExercised:
+        expression: "compose(mapper-any):future15"
+    - type: "LOCAL_VARIABLE"
+      valueUuid: "future2"
+      methodExercised:
+        expression: "onSuccess(handler-any):future17"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "setChunked(arg0):httpClientRequest2"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg02):future3"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg03):future4"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg04):future5"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg05):future6"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg06):future7"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg07):future8"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg08):future9"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg09):future10"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg010):future11"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "write(arg011):future12"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "end():future13"
+    - type: "LOCAL_VARIABLE"
+      name: "request"
+      valueUuid: "httpClientRequest"
+      methodExercised:
+        expression: "response():future14"
+    - type: "LOCAL_VARIABLE"
+      name: "resp"
+      valueUuid: "httpClientResponse"
+      methodExercised:
+        expression: "statusCode():int12"
+    - type: "LOCAL_VARIABLE"
+      name: "resp"
+      valueUuid: "httpClientResponse"
+      methodExercised:
+        expression: "body():future16"
+    - type: "RESULT"
+      name: "result"
+      valueUuid: "future17"
+    disabled: false
+    allValues:
+    - modelValueType: "OBJECT"
+      content: !<new>
+        target: "io.vertx.example.core.http.proxyconnect.Client"
+        parameters: []
+        propertiesMap:
+          vertx:
+            modelValueType: "MOCK"
+            valueType: "io.vertx.core.Vertx"
+            uuid: "fieldVertx"
+      valueType: "io.vertx.example.core.http.proxyconnect.Client"
+      uuid: "target"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Vertx"
+      uuid: "fieldVertx"
+      nameForMock: "vertx"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpClientAgent"
+      uuid: "httpClientAgent"
+    - modelValueType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "io.vertx.core.http.HttpClientOptions"
+        localVariableValue:
+          modelValueType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "io.vertx.core.http.HttpClientOptions"
+            localVariableValue:
+              modelValueType: "OBJECT"
+              content: !<method_return_from_value>
+                target: "io.vertx.core.http.HttpClientOptions"
+                localVariableValue:
+                  modelValueType: "OBJECT"
+                  content: !<method_return_from_value>
+                    target: "io.vertx.core.http.HttpClientOptions"
+                    localVariableValue:
+                      modelValueType: "OBJECT"
+                      content: !<new>
+                        target: "io.vertx.core.http.HttpClientOptions"
+                        parameters: []
+                      valueType: "io.vertx.core.http.HttpClientOptions"
+                      uuid: "httpClientOptions"
+                    methodParameters:
+                    - name: "ssl"
+                      value:
+                        modelValueType: "BASIC"
+                        content: !<regular>
+                          value: true
+                        valueType: "boolean"
+                        uuid: "ssl"
+                    methodName: "setSsl"
+                  valueType: "io.vertx.core.http.HttpClientOptions"
+                  uuid: "httpClientOptions2"
+                methodParameters:
+                - name: "trustAll"
+                  value:
+                    modelValueType: "BASIC"
+                    content: !<regular>
+                      value: true
+                    valueType: "boolean"
+                    uuid: "trustAll"
+                methodName: "setTrustAll"
+              valueType: "io.vertx.core.http.HttpClientOptions"
+              uuid: "httpClientOptions3"
+            methodParameters:
+            - name: "verifyHost"
+              value:
+                modelValueType: "BASIC"
+                content: !<regular>
+                  value: false
+                valueType: "boolean"
+                uuid: "verifyHost"
+            methodName: "setVerifyHost"
+          valueType: "io.vertx.core.http.HttpClientOptions"
+          uuid: "httpClientOptions4"
+        methodParameters:
+        - name: "proxyOptions"
+          value:
+            modelValueType: "OBJECT"
+            content: !<method_return_from_value>
+              target: "io.vertx.core.net.ProxyOptions"
+              localVariableValue:
+                modelValueType: "OBJECT"
+                content: !<method_return_from_value>
+                  target: "io.vertx.core.net.ProxyOptions"
+                  localVariableValue:
+                    modelValueType: "OBJECT"
+                    content: !<method_return_from_value>
+                      target: "io.vertx.core.net.ProxyOptions"
+                      localVariableValue:
+                        modelValueType: "OBJECT"
+                        content: !<new>
+                          target: "io.vertx.core.net.ProxyOptions"
+                          parameters: []
+                        valueType: "io.vertx.core.net.ProxyOptions"
+                        uuid: "proxyOptions"
+                      methodParameters:
+                      - name: "type"
+                        value:
+                          modelValueType: "ENUM"
+                          content: !<regular>
+                            value: "HTTP"
+                          valueType: "io.vertx.core.net.ProxyType"
+                          uuid: "Enum-io.vertx.core.net.ProxyType-HTTP"
+                      methodName: "setType"
+                    valueType: "io.vertx.core.net.ProxyOptions"
+                    uuid: "proxyOptions2"
+                  methodParameters:
+                  - name: "host"
+                    value:
+                      modelValueType: "BASIC"
+                      content: !<regular>
+                        value: "localhost"
+                      valueType: "java.lang.String"
+                      uuid: "host"
+                  methodName: "setHost"
+                valueType: "io.vertx.core.net.ProxyOptions"
+                uuid: "proxyOptions3"
+              methodParameters:
+              - name: "port"
+                value:
+                  modelValueType: "BASIC"
+                  content: !<regular>
+                    value: 8080
+                  valueType: "int"
+                  uuid: "port"
+              methodName: "setPort"
+            valueType: "io.vertx.core.net.ProxyOptions"
+            uuid: "proxyOptions4"
+        methodName: "setProxyOptions"
+      valueType: "io.vertx.core.http.HttpClientOptions"
+      uuid: "httpClientOptions5"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "io.vertx.core.http.HttpClientRequest"
+      uuid: "future"
+    - modelValueType: "OBJECT"
+      content: !<static_field_return>
+        target: "io.vertx.core.http.HttpMethod"
+        fieldName: "GET"
+      valueType: "io.vertx.core.http.HttpMethod"
+      uuid: "httpMethod"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: 8080
+      valueType: "int"
+      uuid: "port2"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "localhost"
+      valueType: "java.lang.String"
+      uuid: "host2"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "/"
+      valueType: "java.lang.String"
+      uuid: "requestURI"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      uuid: "future2"
+    - modelValueType: "ANY"
+      valueType: "java.util.function.Function"
+      uuid: "mapper2-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "io.vertx.core.http.HttpClientResponse"
+      uuid: "future14"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      uuid: "future15"
+    - modelValueType: "ANY"
+      valueType: "java.util.function.Function"
+      uuid: "mapper-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "?"
+      uuid: "future17"
+    - modelValueType: "ANY"
+      valueType: "io.vertx.core.Handler"
+      uuid: "handler-any"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpClientRequest"
+      uuid: "httpClientRequest"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpClientRequest"
+      uuid: "httpClientRequest2"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "arg0"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future3"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-0"
+      valueType: "java.lang.String"
+      uuid: "arg02"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future4"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-1"
+      valueType: "java.lang.String"
+      uuid: "arg03"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future5"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-2"
+      valueType: "java.lang.String"
+      uuid: "arg04"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future6"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-3"
+      valueType: "java.lang.String"
+      uuid: "arg05"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future7"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-4"
+      valueType: "java.lang.String"
+      uuid: "arg06"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future8"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-5"
+      valueType: "java.lang.String"
+      uuid: "arg07"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future9"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-6"
+      valueType: "java.lang.String"
+      uuid: "arg08"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future10"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-7"
+      valueType: "java.lang.String"
+      uuid: "arg09"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future11"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-8"
+      valueType: "java.lang.String"
+      uuid: "arg010"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future12"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: "client-chunk-9"
+      valueType: "java.lang.String"
+      uuid: "arg011"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "java.lang.Void"
+      uuid: "future13"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.http.HttpClientResponse"
+      uuid: "httpClientResponse"
+    - modelValueType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "int12"
+    - modelValueType: "MOCK"
+      valueType: "io.vertx.core.Future"
+      genericValueType: "io.vertx.core.buffer.Buffer"
+      uuid: "future16"
+    branches:
+    - lineNumber: 37
+      expression: "i < 10"
+      range: "(37,27)-(37,32)"
+      evaluatedAs: true
+      internalMethodName: "lambda$start$1"
